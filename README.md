@@ -1,5 +1,5 @@
 # ohtu-viikko3
 
-Tehty laskarit 1-5
+Tehty laskarit 1-7
 
-Seuraavaksi laskari 6
+Seuraavaksi laskari 8
