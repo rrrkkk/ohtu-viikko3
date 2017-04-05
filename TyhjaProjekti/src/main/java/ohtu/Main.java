@@ -19,6 +19,12 @@ public class Main {
 
         String bodyText1 = Request.Get(url1).execute().returnContent().asString();
 
+        Gson mapper1 = new Gson();
+        Course c = mapper1.fromJson(bodyText1, Course.class);
+
+        System.out.println();
+	System.out.println("Kurssi: " + c.getName() + ", " + c.getTerm());
+        System.out.println();
         // System.out.println("json-muotoinen data:");
         // System.out.println( bodyText1 );
 
@@ -31,8 +37,8 @@ public class Main {
         // System.out.println("json-muotoinen data:");
         // System.out.println( bodyText );
 
-        Gson mapper = new Gson();
-        Submission[] subs = mapper.fromJson(bodyText2, Submission[].class);
+        Gson mapper2 = new Gson();
+        Submission[] subs = mapper2.fromJson(bodyText2, Submission[].class);
         
         // System.out.println("Oliot:");
         for (Submission submission : subs) {
@@ -43,5 +49,6 @@ public class Main {
 
         System.out.println();
         System.out.println("yhteensä: " + total_done + " tehtävää " + total_hours + " tuntia");
+        System.out.println();
     }
 }
