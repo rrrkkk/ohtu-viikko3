@@ -11,12 +11,10 @@ public class Tester {
         WebDriver driver = new ChromeDriver();
 
         driver.get("http://localhost:4567");
-        
         sleep(2);
         
         WebElement element = driver.findElement(By.linkText("login"));
         element.click();
-
         sleep(2);
 
         element = driver.findElement(By.name("username"));
@@ -24,10 +22,30 @@ public class Tester {
         element = driver.findElement(By.name("password"));
         element.sendKeys("akkep");
         element = driver.findElement(By.name("login"));
-        
         sleep(2);
-        element.submit();
 
+        element.submit();
+        sleep(3);
+
+	driver.quit();
+
+	driver = new ChromeDriver();
+	
+        driver.get("http://localhost:4567");
+        sleep(2);
+
+	element = driver.findElement(By.linkText("login"));
+        element.click();
+        sleep(2);
+
+        element = driver.findElement(By.name("username"));
+        element.sendKeys("pekka");
+        element = driver.findElement(By.name("password"));
+        element.sendKeys("foobar");
+        element = driver.findElement(By.name("login"));
+        sleep(2);
+        
+        element.submit();
         sleep(3);
         
         driver.quit();
