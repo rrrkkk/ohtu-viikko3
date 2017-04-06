@@ -1,0 +1,43 @@
+.
+├── build
+│   ├── classes
+│   │   └── main
+│   │       └── ohtu
+│   │           ├── Course.class
+│   │           ├── Main.class
+│   │           └── Submission.class
+│   ├── installShadow
+│   │   └── TyhjaProjekti
+│   │       ├── bin
+│   │       │   ├── TyhjaProjekti
+│   │       │   └── TyhjaProjekti.bat
+│   │       └── lib
+│   │           └── TyhjaProjekti-all.jar
+│   ├── libs
+│   │   └── TyhjaProjekti-all.jar
+│   ├── scriptsShadow
+│   │   ├── TyhjaProjekti
+│   │   └── TyhjaProjekti.bat
+│   └── tmp
+│       ├── compileJava
+│       └── shadowJar
+│           └── MANIFEST.MF
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+├── src
+│   └── main
+│       └── java
+│           └── ohtu
+│               ├── Course.java
+│               ├── Main.java
+│               └── Submission.java
+├── tree.clean
+└── tree.installShadow
+
+19 directories, 21 files

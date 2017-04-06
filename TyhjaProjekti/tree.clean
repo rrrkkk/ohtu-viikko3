@@ -1,0 +1,19 @@
+.
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+├── src
+│   └── main
+│       └── java
+│           └── ohtu
+│               ├── Course.java
+│               ├── Main.java
+│               └── Submission.java
+└── tree.clean
+
+6 directories, 10 files
