@@ -1,4 +1,2 @@
 pekka;akkep
 jukka;akkuj
-foo;foo123
-bar;foo123
