@@ -6,5 +6,5 @@ Tehty laskarit 1-8
 
 ## Viikko 4
 
-Tehty laskarit 1-5
+Tehty laskarit 1-6
 
