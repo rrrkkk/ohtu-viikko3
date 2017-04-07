@@ -29,3 +29,16 @@ Scenario: creation fails when password and password confirmation do not match
         Given new user is selected
         When correct username "quux" and correct password "foobar12" and different password confirmation "foobar13" are given
         Then user is not created and error "password and password confirmation do not match" is reported
+
+Scenario: user can login with succesfully generated account
+        Given user with username "liisa" with password "salainen1" is succesfully created
+        And   login is selected
+        When  correct username "liisa" and password "salainen1" are given
+        Then  user is logged in
+
+Scenario: user can not login with account that is not succesfully created
+        Given user with username "aa" and password "bad" is unsuccesfully created
+        And   login is selected
+        When  incorrect username "aa" and incorrect password "bad" are given
+        Then  user is not logged in and error message is given
+

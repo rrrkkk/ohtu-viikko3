@@ -28,6 +28,24 @@ public class Stepdefs {
         element.click();          
     } 
 
+    @Given("^user with username \"([^\"]*)\" with password \"([^\"]*)\" is succesfully created$")
+    public void user_succesfully_created(String username, String password) throws Throwable {
+        driver.get(baseUrl);
+        WebElement element = driver.findElement(By.linkText("register new user"));
+        element.click();      
+        enterUserData(username, password, password);
+        pageHasContent("Welcome to Ohtu Application");
+    } 
+
+    @Given("^user with username \"([^\"]*)\" and password \"([^\"]*)\" is unsuccesfully created$")
+    public void user_unsuccesfully_created(String username, String password) throws Throwable {
+        driver.get(baseUrl);
+        WebElement element = driver.findElement(By.linkText("register new user"));
+        element.click();      
+        enterUserData(username, password, password);
+        pageHasContent("Create username and give password");
+    } 
+
     @When("^correct username \"([^\"]*)\" and password \"([^\"]*)\" are given$")
     public void username_correct_and_password_are_given(String username, String password) throws Throwable {
         logInWith(username, password);
